@@ -1,0 +1,29 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.logo{
+    width: 190px;
+    position: relative;
+    left: 100px;
+}
+.navlink{
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 25px;
+    color: black;
+    margin: 10px;
+}
+.navlink:hover{
+    color: red;
+    transform: scale(1.1);
+    transition: 0.1s;
+    font-size: 27px;
+
+}
+.navlink_placeholder:hover{
+    transform: scale(1.1);
+    font-size: 27px;
+}
