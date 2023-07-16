@@ -1,7 +1,40 @@
-.map{
-    width:100%;
+.map {
+  width: 100%;
 }
-.worldStats{
-    text-align: center;
-    font-family: sans-serif;
+.worldStats {
+  text-align: center;
+  font-family: sans-serif;
+  color: red;
+  font-size: 40px;
+}
+.card_statistics {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin: 30px 0;
+  div {
+    border: 1px solid black;
+    box-shadow: 3px 3px 15px 2px #888;
+    border-radius: 0.45rem;
+    height: 160px;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 28px;
+    font-family: Helvetica;
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    &:hover {
+      transform: scale(1.3);
+      transition: 0.1s;
+    }
+  }
 }

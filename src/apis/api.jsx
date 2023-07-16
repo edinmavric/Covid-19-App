@@ -17,8 +17,8 @@ try {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-//ja mislim da bi mogao export za ove podatke ako se ne varam
- const optionsStatistics = {
+
+const optionsStatistics = {
   method: 'GET',
   url: 'https://covid-193.p.rapidapi.com/statistics',
   headers: {
