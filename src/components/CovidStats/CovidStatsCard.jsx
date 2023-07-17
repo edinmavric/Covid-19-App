@@ -17,7 +17,7 @@ const CovidStatsCard = ({
         Country: <span>{countryName}</span>
       </div>
       <div className="CovidStats-Card__rates">
-        <div className='population'>
+        <div className="population">
           Population: <span>{population}</span>
         </div>
         <div>
@@ -26,13 +26,7 @@ const CovidStatsCard = ({
         <div>
           Deaths: <span>{deaths}</span>
         </div>
-        <div
-          style={{
-            backgroundImage: `url(
-            https://flagsapi.com/BE/flat/64.png
-              )`,
-          }}
-        ></div>
+        <img src={countryImg} alt="" />
       </div>
     </div>
   );

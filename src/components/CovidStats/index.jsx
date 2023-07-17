@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CovidStatsCard from './CovidStatsCard';
 import axios from 'axios';
+import { countryListAllIsoData } from '../../apis/flags';
 
 const CovidStats = () => {
   const [covidStats, setCovidStats] = useState([]);
@@ -39,19 +40,30 @@ const CovidStats = () => {
     visitedPerPage + perPage
   );
 
+  const findCountryCodeByName = countryName => {
+    const country = countryListAllIsoData.find(
+      country => country.name.toLowerCase() === countryName.toLowerCase()
+    );
+
+    return country && country.code ? country.code.toLowerCase() : null;
+  };
+
   return (
     <div>
-      {paginatedData.map(el => (
-        <CovidStatsCard
-          key={el.country}
-          continent={el.continent}
-          countryName={el.country}
-          population={el.population || 0}
-          newCases={el.cases.new || 0}
-          deaths={el.deaths.total || 0}
-          countryImg={'BE'}
-        />
-      ))}
+      {paginatedData.map(el => {
+        const countryCode = findCountryCodeByName(el.country);
+        return (
+          <CovidStatsCard
+            key={el.country}
+            continent={el.continent}
+            countryName={el.country}
+            population={el.population || 0}
+            newCases={el.cases.new || 0}
+            deaths={el.deaths.total || 0}
+            countryImg={`https://flagcdn.com/w320/${countryCode}.png`}
+          />
+        );
+      })}
       <div className="buttons-container">
         <button
           disabled={activePage === 1}
