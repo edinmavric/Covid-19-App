@@ -1,0 +1,105 @@
+.CovidStats-Card {
+  border: 1px solid black;
+  margin: 30px auto;
+  padding: 24px;
+  box-shadow: 10px 5px 18px rgba(82, 32, 20, 0.6);
+  min-width: 275px;
+  width: 1000px;
+  border: 1px solid rgb(239, 110, 110);
+  border-radius: 5px;
+  transition: 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+
+  span {
+    margin-left: 12px;
+  }
+
+  .continent {
+    font-size: 22px;
+  }
+
+  .country {
+    font-size: 26px;
+  }
+
+  div {
+    margin: 12px 0;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  .CovidStats-Card__rates {
+    display: flex;
+    flex-direction: row;
+    margin-top: 22px;
+
+    .population {
+      margin: 0;
+      margin-right: 14px;
+    }
+
+    div {
+      margin: 0 14px;
+      font-size: 20px;
+
+      span {
+        padding: 4px 8px;
+        border-radius: 0.35rem;
+      }
+
+      &:nth-child(1) {
+        span {
+          border: 4px double green;
+          color: green;
+          background-color: rgba(0, 128, 0, 0.01);
+        }
+      }
+      &:nth-child(2) {
+        span {
+          border: 4px double purple;
+          color: purple;
+          background-color: rgba(128, 0, 128, 0.01);
+        }
+      }
+      &:nth-child(3) {
+        span {
+          border: 4px double red;
+          color: red;
+          background-color: rgba(255, 0, 0, 0.01);
+        }
+      }
+    }
+  }
+}
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 12px auto;
+  flex-direction: row;
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  button {
+    padding: 6px 12px;
+    border-radius: 50%;
+    border: 1px solid rgb(239, 110, 110);
+    background-color: rgb(239, 110, 110, 0.15);
+    cursor: pointer;
+    transition: 200ms;
+    font-size: 22px;
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: rgb(239, 110, 110, 0.5);
+    }
+  }
+
+  span {
+    margin: 0 24px;
+    font-weight: bold;
+  }
+}
