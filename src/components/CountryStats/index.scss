@@ -1,0 +1,116 @@
+.flag {
+    animation: wave 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes wave {
+    0% {
+      top: 5%;
+    }
+    100% {
+      top: -5%;
+    }
+  }
+  .country-card {
+    width: 66%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 16px auto;
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    .country-info {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      .country-flag {
+        width: 56px;
+        opacity: 0.75;
+        display: block;
+      }
+      .country-name {
+        font-weight: bold;
+        font-size: 1.25rem;
+        color: #4a5568;
+        margin-left: 8px;
+      }
+    }
+    .country-data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .data-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        .data-box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #ffffff;
+          border-radius: 8px;
+          padding: 8px;
+          .data-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #8b5cf6;
+          }
+          .data-label {
+            font-size: 0.875rem;
+            color: #718096;
+          }
+        }
+      }
+      .total-active {
+        background-color: #ffffff;
+        border-radius: 8px;
+        padding: 12px;
+        margin-top: 12px;
+        .data-value {
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #9ca3af;
+        }
+        .data-label {
+          font-size: 0.875rem;
+          color: #4a5568;
+        }
+      }
+    }
+    .skeleton-loader {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      .MuiSkeleton-root {
+        border-radius: 8px;
+      }
+    }
+  }
+  
+  .top-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .CountryStates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("https://northernvirginiamag.com/wp-content/uploads/2020/06/people-with-masks.jpg");
+    background-size: cover;
+    background-position: center;
+    .mainCountryStats {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
